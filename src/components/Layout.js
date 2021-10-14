@@ -1,11 +1,14 @@
 import React from "react";
 import Navigation from "./Navigation";
+import styles from "../styles/Layout.module.css";
 
 const Layout = (props) => {
 	return (
 		<>
-			<Navigation />
-			{props.children}
+			<header>
+				<Navigation />
+			</header>
+			<main className={styles.container}>{props.children}</main>
 		</>
 	);
 };
