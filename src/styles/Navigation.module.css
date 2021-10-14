@@ -7,6 +7,7 @@
 
 .nav > ul {
 	height: 100%;
+	max-width: 1200px;
 	display: flex;
 	justify-content: flex-end;
 }
