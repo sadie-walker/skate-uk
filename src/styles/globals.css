@@ -1,9 +1,79 @@
+/* Ostrich Sans */
+
+@font-face {
+	font-family: "Ostrich Sans";
+	src: local("☺"), url("/fonts/ostrich-sans-black.ttf") format("truetype");
+	font-weight: 900;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Ostrich Sans";
+	src: local("☺"), url("/fonts/ostrich-sans-bold.ttf") format("truetype");
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Ostrich Sans";
+	src: local("☺"), url("/fonts/ostrich-sans-regular.ttf") format("truetype");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Ostrich Sans";
+	src: local("☺"), url("/fonts/ostrich-sans-light.ttf") format("truetype");
+	font-weight: 300;
+	font-style: normal;
+}
+
+/* Ostrich Sans Dashed */
+
+@font-face {
+	font-family: "Ostrich Sans Dashed";
+	src: local("☺"), url("/fonts/ostrich-sans-dashed.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Ostrich Sans Rounded */
+
+@font-face {
+	font-family: "Ostrich Sans Rounded";
+	src: local("☺"), url("/fonts/ostrich-sans-rounded.ttf") format("truetype");
+	font-weight: 500;
+	font-style: normal;
+}
+
+/* Ostrich Sans Inline */
+
+@font-face {
+	font-family: "Ostrich Sans Inline";
+	src: local("☺"),
+		url("/fonts/ostrich-sans-inline-regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "Ostrich Sans Inline";
+	src: local("☺"),
+		url("/fonts/ostrich-sans-inline-italic.ttf") format("truetype");
+	font-weight: normal;
+	font-style: italic;
+}
+
+/* Open Sans Regular 400 & Light 300 Italic */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+
 html,
 body {
 	padding: 0;
 	margin: 0;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-		Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+	font-family: Open Sans;
+	color: rgba(39, 39, 39, 0.836);
+}
+
+h2 {
+	font-family: Ostrich Sans Rounded;
+	letter-spacing: 1px;
 }
 
 a {
@@ -22,9 +92,10 @@ ul {
 }
 
 /* 
-	yellow : #FCE762
-	ivory: #FFFDED
-	orange: #FFB17A
-	light-purple: #4F4789,
-	dark-purple: #201335
+	light: #fffdfd
+	dark-orange: e27d60
+	blue: 85dcb
+	light-orange: e8a87c
+	purple: c38d9e
+	green: 441b3a3
 */

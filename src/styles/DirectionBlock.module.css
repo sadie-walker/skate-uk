@@ -1,0 +1,32 @@
+.block {
+	height: 200px;
+	cursor: pointer;
+	transition: transform 0.5s ease;
+	background-color: #e27d60;
+	background-size: cover;
+	position: relative;
+	color: #fffdfdce;
+	z-index: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.block:after {
+	content: "";
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: rgba(56, 55, 54, 0.712);
+}
+
+.block:hover {
+	transform: scale(1.02);
+}
+
+.block h2 {
+	text-align: center;
+	z-index: 1;
+}

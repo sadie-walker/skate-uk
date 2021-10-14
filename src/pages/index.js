@@ -1,10 +1,15 @@
-import Navigation from "../components/Navigation";
-import styles from "../styles/Home.module.css";
+import HomeDirections from "../components/HomeDirections";
+import styles from "../styles/HomePage.module.css";
 
 export default function Home() {
 	return (
-		<>
-			<h1>Hi Skaters!</h1>
-		</>
+		<section className={styles.home}>
+			<h1>Hi Skaters! Welcome to the home of UK skating.</h1>
+			<p>
+				Whether your looking for a new place to skate, people to skate
+				with or equipment recommendations - we have it all.
+			</p>
+			<HomeDirections />
+		</section>
 	);
 }
