@@ -60,10 +60,17 @@
 	font-style: italic;
 }
 
+/* Open Sans Regular 400 & Light 300 Italic */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+
 html,
 body {
 	padding: 0;
 	margin: 0;
+	font-family: Open Sans;
+}
+
+h2 {
 	font-family: Ostrich Sans Rounded;
 	letter-spacing: 1px;
 }
