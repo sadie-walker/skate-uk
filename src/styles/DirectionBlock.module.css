@@ -2,10 +2,10 @@
 	height: 200px;
 	cursor: pointer;
 	transition: transform 0.5s ease;
-	background-color: #ffb17a;
+	background-color: #e27d60;
 	background-size: cover;
 	position: relative;
-	color: #fffded;
+	color: #fffdfdce;
 	z-index: 0;
 	display: flex;
 	align-items: center;

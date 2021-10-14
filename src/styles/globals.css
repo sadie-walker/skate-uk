@@ -68,6 +68,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: Open Sans;
+	color: rgba(39, 39, 39, 0.836);
 }
 
 h2 {
@@ -91,9 +92,10 @@ ul {
 }
 
 /* 
-	yellow : #FCE762
-	ivory: #FFFDED
-	orange: #FFB17A
-	light-purple: #4F4789,
-	dark-purple: #201335
+	light: #fffdfd
+	dark-orange: e27d60
+	blue: 85dcb
+	light-orange: e8a87c
+	purple: c38d9e
+	green: 441b3a3
 */
