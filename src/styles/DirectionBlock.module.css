@@ -10,6 +10,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 5px;
+	min-width: 295px;
 }
 
 .block:after {
@@ -26,7 +28,12 @@
 	transform: scale(1.02);
 }
 
+.block:hover h2 {
+	transform: scale(1.1);
+}
+
 .block h2 {
 	text-align: center;
 	z-index: 1;
+	transition: transform 0.3s ease;
 }

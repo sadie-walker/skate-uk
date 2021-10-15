@@ -1,7 +1,7 @@
 .directions {
 	display: grid;
-	grid-template-columns: repeat(2, 1fr);
+	grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
 	gap: 20px;
-	width: 75%;
+	width: 90%;
 	margin: auto;
 }
