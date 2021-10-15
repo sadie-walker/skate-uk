@@ -4,16 +4,16 @@
 	position: absolute;
 	top: 100%;
 	left: 0;
-	background-color: #4f4789;
+	background-color: #41b3a3;
 	width: 250px;
 }
 .submenu > li {
 	padding: 10px;
-	border-top: 1px solid #201335;
+	border-top: 1px solid #fffdfd34;
 }
 
 .submenu > li:hover {
-	background-color: #fff;
-	color: #000;
+	background-color: #fffdfd;
 	cursor: pointer;
+	color: rgba(39, 39, 39, 0.836);
 }
