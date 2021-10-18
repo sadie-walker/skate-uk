@@ -10,6 +10,7 @@ const Navigation = () => {
 	return (
 		<nav className={styles.nav}>
 			<ul className={styles.links}>
+				<NavigationItem title={"Home"} href={"/"} hasSubMenu={false} />
 				<NavigationItem
 					title={"Locations"}
 					href={"/locations"}
