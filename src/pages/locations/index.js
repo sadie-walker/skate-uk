@@ -1,5 +1,5 @@
 import React from "react";
-import Directions from "../../components/Directions";
+import PageLayout from "../../components/PageLayout";
 
 const index = () => {
 	const directions = [
@@ -21,10 +21,12 @@ const index = () => {
 	];
 
 	return (
-		<section>
-			<h1>Find somewhere to skate</h1>
-			<Directions directions={directions} width="1fr" />
-		</section>
+		<PageLayout
+			title="Find somewhere to skate"
+			lead="There are lots of super fun places to skate in the UK - why not
+	try somewhere new!"
+			directions={directions}
+		/>
 	);
 };
 
