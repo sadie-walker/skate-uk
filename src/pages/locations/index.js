@@ -15,7 +15,7 @@ const index = () => {
 		},
 		{
 			title: "Discos / Rinks",
-			href: "/locations/disco-rinks",
+			href: "/locations/skate-rinks",
 			bgImg: "disco-rink.jpg",
 		},
 	];
