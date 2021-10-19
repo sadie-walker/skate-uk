@@ -1,0 +1,11 @@
+.list {
+	display: flex;
+	flex-direction: column;
+}
+
+.item {
+	width: 100%;
+	background-color: #85cdca;
+	text-align: center;
+	margin: 5px 0;
+}

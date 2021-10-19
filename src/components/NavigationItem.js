@@ -8,34 +8,34 @@ const NavigationItem = (props) => {
 	const locationLinks = [
 		{
 			title: "Skate Trails",
-			href: "/skate-trails",
+			href: "/locations/trails",
 		},
 		{
 			title: "Skate Parks",
-			href: "/skate-parks",
+			href: "/locations/skate-parks",
 		},
 		{
 			title: "Skate Rink / Disco",
-			href: "/skate-rinks",
+			href: "/locations/skate-rinks",
 		},
 	];
 
 	const groupsLinks = [
 		{
 			title: "Roller Derby",
-			href: "/roller-derby",
+			href: "/groups/roller-derby",
 		},
 		{
 			title: "Artistic",
-			href: "/artistic",
+			href: "/groups/artistic",
 		},
 		{
-			title: "Dance",
-			href: "/dance",
+			title: "Jam Skating",
+			href: "/groups/jam",
 		},
 		{
 			title: "Other",
-			href: "/other",
+			href: "/groups/other",
 		},
 	];
 
