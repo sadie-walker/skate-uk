@@ -30,8 +30,8 @@ const NavigationItem = (props) => {
 			href: "/groups/artistic",
 		},
 		{
-			title: "Dance",
-			href: "/groups/dance",
+			title: "Jam Skating",
+			href: "/groups/jam",
 		},
 		{
 			title: "Other",
