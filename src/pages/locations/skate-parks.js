@@ -23,6 +23,7 @@ const skateParks = () => {
 	return (
 		<div>
 			<SubPageLayout
+				topic="Location"
 				title="Skate Parks"
 				lead="Indoor & outdoor skate parks with ramps & other equipment."
 				threads={threads}

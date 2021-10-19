@@ -1,6 +1,8 @@
 import React from "react";
 import ThreadList from "./ThreadList";
 import styles from "../styles/SubPageLayout.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 const SubPageLayout = (props) => {
 	return (
@@ -8,7 +10,16 @@ const SubPageLayout = (props) => {
 			<h1>{props.title}</h1>
 			<p>{props.lead}</p>
 			<div className={styles.topic}>
-				<h2>Locations</h2>
+				<h2>{props.topic + "s"}</h2>
+				<div className={styles.actions}>
+					<div className={styles.input}>
+						<div>
+							<FontAwesomeIcon icon={faSearch} />
+						</div>
+						<input type="text" />
+					</div>
+					<button>Add {props.topic}</button>
+				</div>
 				<ul className={styles["topic-list"]}>
 					<li>
 						<h3>place 1</h3>

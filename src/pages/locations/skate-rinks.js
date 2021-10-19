@@ -23,6 +23,7 @@ const discoRinks = () => {
 	return (
 		<div>
 			<SubPageLayout
+				topic="Location"
 				title="Skate Rinks & Roller Discos"
 				lead="Indoor rinks for a casual skating or artistic/jam skating."
 				threads={threads}

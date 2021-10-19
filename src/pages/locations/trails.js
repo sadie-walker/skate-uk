@@ -23,6 +23,7 @@ const trails = () => {
 	return (
 		<div>
 			<SubPageLayout
+				topic="Location"
 				title="Skate Trails"
 				lead="Beautiful outdoor trail skates"
 				threads={threads}
