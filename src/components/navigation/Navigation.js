@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import styles from "../styles/Navigation.module.css";
+import styles from "../../styles/Navigation.module.css";
 import NavigationItem from "./NavigationItem";
 import LoginNav from "./LoginNav";
 import AccountNav from "./AccountNav";

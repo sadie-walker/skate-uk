@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import styles from "../styles/AccountNav.module.css";
+import styles from "../../styles/AccountNav.module.css";
 
 const AccountNav = () => {
 	const [accMenuOpen, setAccMenuOpen] = useState(false);
