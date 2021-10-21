@@ -33,20 +33,6 @@
 	right: 0;
 }
 
-.subpage .topic .topic-list {
-	display: flex;
-	justify-content: center;
-	margin: 0 auto;
-	flex-wrap: wrap;
-}
-
-.subpage .topic .topic-list li {
-	background-color: #85cdca;
-	width: 250px;
-	height: 250px;
-	margin: 10px;
-}
-
 .subpage .topic .actions {
 	display: flex;
 	justify-content: space-between;

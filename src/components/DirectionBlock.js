@@ -4,7 +4,6 @@ import styles from "../styles/DirectionBlock.module.css";
 
 const DirectionBlock = (props) => {
 	const img = require(`../assets/${props.bgImg}`).default.src;
-	console.log(img);
 	return (
 		<Link href={props.href} passHref>
 			<div

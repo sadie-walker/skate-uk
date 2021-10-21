@@ -1,0 +1,13 @@
+.topic-list {
+	display: flex;
+	justify-content: center;
+	margin: 0 auto;
+	flex-wrap: wrap;
+}
+
+.topic-list li {
+	background-color: #85cdca;
+	width: 250px;
+	height: 250px;
+	margin: 10px;
+}
