@@ -1,10 +1,10 @@
 import React from "react";
 import SubPageLayout from "../../components/SubPageLayout";
 
+import firebaseApp from "../../../database/firebase";
 import { getDatabase, ref, get, child } from "firebase/database";
 
 const groupPage = (props) => {
-	console.log(props.title);
 	return (
 		<SubPageLayout
 			topic="group"
@@ -16,7 +16,27 @@ const groupPage = (props) => {
 	);
 };
 
-export async function getServerSideProps(context) {
+export const getStaticPaths = async () => {
+	const dbRef = ref(getDatabase(firebaseApp));
+	const snapshot = await get(child(dbRef, `groups`));
+	const data = snapshot.val();
+
+	const arr = Object.entries(data);
+	const paths = arr.map(([key]) => {
+		return {
+			params: {
+				groupsId: key.toString().replace(" ", "-"),
+			},
+		};
+	});
+
+	return {
+		paths,
+		fallback: false,
+	};
+};
+
+export const getStaticProps = async (context) => {
 	const dbPath = context.params.groupsId.replace("-", " ");
 	const dbRef = ref(getDatabase());
 	const snapshot = await get(child(dbRef, `groups/${dbPath}`));
@@ -26,10 +46,11 @@ export async function getServerSideProps(context) {
 		props: {
 			lead: data.lead,
 			title: data.title,
-			// threads: data.threads,
+			threads: data.threads,
 			list: data.groups,
 		},
+		revalidate: 10000,
 	};
-}
+};
 
 export default groupPage;
