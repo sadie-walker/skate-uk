@@ -12,10 +12,8 @@
 	/* margin-bottom: 0px; */
 }
 
-.subpage .topic h2:before,
-.subpage .topic h2:after,
-.subpage .threads > h2:before,
-.subpage .threads > h2:after {
+.subpage > div > h2:before,
+.subpage > div > h2:after {
 	content: "";
 	width: 40%;
 	top: 50%;
@@ -23,13 +21,13 @@
 	border: 1px solid rgba(39, 39, 39, 0.836);
 }
 
-.subpage .topic h2:before,
-.subpage .threads > h2:before {
+.subpage > div > h2:before,
+.subpage > div > h2:before {
 	left: 0;
 }
 
-.subpage .topic h2:after,
-.subpage .threads > h2:after {
+.subpage > div > h2:after,
+.subpage > div > h2:after {
 	right: 0;
 }
 

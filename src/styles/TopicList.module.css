@@ -5,9 +5,18 @@
 	flex-wrap: wrap;
 }
 
-.topic-list li {
+.item {
 	background-color: #85cdca;
+	cursor: pointer;
+	margin: 10px;
+}
+
+.item > div {
 	width: 250px;
 	height: 250px;
-	margin: 10px;
+	padding: 20px 0;
+}
+
+.item > div > h2 {
+	margin: 0;
 }
