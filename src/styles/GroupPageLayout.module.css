@@ -1,0 +1,10 @@
+.grp-layout-content {
+	display: flex;
+}
+
+.grp-layout-content ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	margin-left: 40px;
+}

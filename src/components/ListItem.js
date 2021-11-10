@@ -4,7 +4,7 @@ import { useRouter } from "next/dist/client/router";
 
 const ListItem = (props) => {
 	const currentPath = useRouter().asPath;
-	const id = props.title.replace(" ", "-").toLowerCase();
+	const id = props.title.replace(/ /g, "-").toLowerCase();
 
 	return (
 		<Link href={`${currentPath}/${id}`} passHref>
