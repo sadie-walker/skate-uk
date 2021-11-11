@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import GroupPageLayout from "../../../components/GroupPageLayout";
+import GroupPageLayout from "../../../../components/GroupPageLayout";
 
-import firebaseApp from "../../../../firebase/firebase";
+import firebaseApp from "../../../../../firebase/firebase";
 import { getDatabase, ref, get, child } from "firebase/database";
 import {
 	getStorage,
