@@ -1,17 +1,17 @@
 import React from "react";
-import ThreadList from "./ThreadList";
-import styles from "../styles/SubPageLayout.module.css";
+import ThreadList from "../ThreadList";
+import styles from "../../styles/SubCategoryPageLayout.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import TopicList from "./TopicList";
+import TopicList from "../TopicList";
 
-const SubPageLayout = (props) => {
+const SubCategoryPageLayout = ({ topic, subCategory, subCategoryItems }) => {
 	return (
 		<section className={styles.subpage}>
-			<h1>{props.title}</h1>
-			<p>{props.lead}</p>
+			<h1>{subCategory.title}</h1>
+			<p>{subCategory.lead}</p>
 			<div className={styles.topic}>
-				<h2>{props.topic}</h2>
+				<h2>{topic}</h2>
 				<div className={styles.actions}>
 					<div className={styles.input}>
 						<div>
@@ -19,16 +19,16 @@ const SubPageLayout = (props) => {
 						</div>
 						<input type="text" />
 					</div>
-					<button>Add {props.topic}</button>
+					<button>Add {topic}</button>
 				</div>
-				<TopicList list={props.list} />
+				<TopicList list={subCategoryItems} />
 			</div>
 			<div className={styles.threads}>
 				<h2>Discussion</h2>
-				<ThreadList threads={props.threads} />
+				<ThreadList threads={subCategory.threads} />
 			</div>
 		</section>
 	);
 };
 
-export default SubPageLayout;
+export default SubCategoryPageLayout;

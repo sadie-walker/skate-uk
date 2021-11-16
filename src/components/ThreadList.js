@@ -6,7 +6,7 @@ const ThreadList = (props) => {
 	const threadList = props.threads.map((thread, i) => {
 		return (
 			<li key={thread.title + i} className={styles.item}>
-				<ListItem title={thread.title} />
+				<ListItem title={thread.title} type="thread" />
 			</li>
 		);
 	});

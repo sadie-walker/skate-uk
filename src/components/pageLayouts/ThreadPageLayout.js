@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import styles from "../styles/ThreadPageLayout.module.css";
+import styles from "../../styles/ThreadPageLayout.module.css";
 
-const ThreadPageLayout = ({ group, thread }) => {
+const ThreadPageLayout = ({ parentPage, thread }) => {
 	let comments;
 	if (thread.comments && thread.comments.length > 0) {
 		comments = thread.comments.map((comment, i) => {
@@ -29,7 +29,7 @@ const ThreadPageLayout = ({ group, thread }) => {
 	return (
 		<section className={styles["thread"]}>
 			<h1>
-				<em>{group}</em>
+				<em>{parentPage}</em>
 				<br />
 				{thread.title}
 			</h1>

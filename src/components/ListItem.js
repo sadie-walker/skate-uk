@@ -7,7 +7,14 @@ const ListItem = (props) => {
 	const id = props.title.replace(/ /g, "-").toLowerCase();
 
 	return (
-		<Link href={`${currentPath}/${id}`} passHref>
+		<Link
+			href={
+				props.type === "thread"
+					? `${currentPath}/threads/${id}`
+					: `${currentPath}/${id}`
+			}
+			passHref
+		>
 			<div>
 				<h2>{props.title}</h2>
 			</div>
