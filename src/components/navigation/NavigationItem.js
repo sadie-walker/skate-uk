@@ -8,7 +8,7 @@ const NavigationItem = (props) => {
 	const locationLinks = [
 		{
 			title: "Skate Trails",
-			href: "/locations/trails",
+			href: "/locations/skate-trails",
 		},
 		{
 			title: "Skate Parks",

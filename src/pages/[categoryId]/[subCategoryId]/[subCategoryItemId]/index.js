@@ -9,37 +9,63 @@ import {
 	getDownloadURL,
 } from "firebase/storage";
 
-const subCategoryItemPage = ({ pageItem, url }) => {
-	return <SubCategoryItemPageLayout pageItem={pageItem} logo={url} />;
+const subCategoryItemPage = ({ pageItem, url, fields, threads }) => {
+	return (
+		<SubCategoryItemPageLayout
+			pageItem={pageItem}
+			logo={url}
+			fields={fields}
+			threads={threads}
+		/>
+	);
 };
 
 export const getServerSideProps = async (context) => {
-	//fetch groups based on groupsId from database
 	const category = context.params.categoryId;
 	const subCategory = context.params.subCategoryId.replace(/-/g, " ");
 	const subCategoryItem = context.params.subCategoryItemId.replace(/-/g, " ");
 
-	// get list of subCategoryItems
+	// fetch subCategory
 	const dbRef = ref(getDatabase());
-	const snapshot = await get(
-		child(dbRef, `${category}/${subCategory}/${category}`)
+	const subCatSnapshot = await get(
+		child(dbRef, `/categories/${category}/types/${subCategory}`)
 	);
-	const data = snapshot.val();
+	const subCat = subCatSnapshot.val();
 
-	//select subCategoryItem based on subCategoryItemId
-	const pageItem = data.find((item) => {
-		return item.name.toLowerCase() === subCategoryItem;
-	});
+	// set pageItem
+	const pageItem = subCat[category][subCategoryItem];
+
+	// fetch categoryFields
+	const fieldsSnapshot = await get(
+		child(dbRef, `/categories/${category}/categoryFields`)
+	);
+	const categoryFields = fieldsSnapshot.val();
 
 	// fetch logo image from storage
 	const storageReference = storageRef(getStorage(firebaseApp));
-	const logo = storageRef(storageReference, `images/${pageItem.img}`);
-	let logoUrl = await getDownloadURL(logo);
+	let logo;
+	if (pageItem.img) {
+		logo = storageRef(storageReference, `images/${pageItem.img}`);
+	} else {
+		logo = storageRef(storageReference, `images/defaultLocation.jpg`);
+	}
+	const logoUrl = await getDownloadURL(logo);
+
+	// fetch threads
+	const threadSnapshot = await get(
+		child(
+			dbRef,
+			`/threads/${category}/${subCategory}/${category}/${subCategoryItem}`
+		)
+	);
+	const threads = Object.values(threadSnapshot.val());
 
 	return {
 		props: {
 			url: logoUrl,
-			pageItem,
+			pageItem: subCat[category][subCategoryItem],
+			fields: [...categoryFields, ...subCat.subCategoryFields],
+			threads,
 		},
 	};
 };

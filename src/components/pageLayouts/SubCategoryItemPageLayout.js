@@ -1,10 +1,10 @@
 import React from "react";
 import Image from "next/image";
-import ThreadList from "../ThreadList";
-import styles from "../../styles/SubCategoryItemPageLayout.module.css";
+import styles from "../../styles/pageLayouts/SubCategoryItemPageLayout.module.css";
 import SubCategoryItemPageDetails from "../SubCategoryItemPageDetails";
+import ThreadSection from "./ThreadSection";
 
-const SubCategoryItemPageLayout = ({ pageItem, logo }) => {
+const SubCategoryItemPageLayout = ({ pageItem, logo, fields, threads }) => {
 	return (
 		<section>
 			<h1>{pageItem.name}</h1>
@@ -16,12 +16,12 @@ const SubCategoryItemPageLayout = ({ pageItem, logo }) => {
 					height="200"
 					width="300"
 				></Image>
-				<SubCategoryItemPageDetails pageItem={pageItem} />
+				<SubCategoryItemPageDetails
+					pageItem={pageItem}
+					fields={fields}
+				/>
 			</div>
-			<div>
-				<h2>Threads</h2>
-				<ThreadList threads={pageItem.threads} />
-			</div>
+			<ThreadSection threads={threads} className={className} />
 		</section>
 	);
 };

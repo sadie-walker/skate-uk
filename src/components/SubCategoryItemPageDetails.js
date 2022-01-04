@@ -1,15 +1,13 @@
 import React from "react";
 
-const SubCategoryItemPageDetails = ({ pageItem }) => {
-	const details = Object.entries(pageItem);
-	const list = details.map(([key, value], i) => {
-		if (key !== "threads" && key !== "name" && key !== "img") {
-			return (
-				<li key={key + i}>
-					<strong>{key}:</strong> {value}
-				</li>
-			);
-		}
+const SubCategoryItemPageDetails = ({ pageItem, fields }) => {
+	const list = fields.map((field, i) => {
+		return (
+			<li key={field + i}>
+				<strong>{field}:</strong>
+				{pageItem[field.toLowerCase()]}
+			</li>
+		);
 	});
 	return <ul>{list}</ul>;
 };

@@ -1,0 +1,83 @@
+.subpage h1 {
+	font-family: Ostrich Sans;
+	font-size: calc(100% + 3vw);
+	margin-bottom: 5px;
+}
+
+.subpage .topic h2,
+.subpage .threads > h2 {
+	font-size: calc(100% + 1.5vw);
+	text-align: center;
+	position: relative;
+	/* margin-bottom: 0px; */
+}
+
+.subpage > div > h2:before,
+.subpage > div > h2:after {
+	content: "";
+	width: 40%;
+	top: 50%;
+	position: absolute;
+	border: 1px solid rgba(39, 39, 39, 0.836);
+}
+
+.subpage > div > h2:before,
+.subpage > div > h2:before {
+	left: 0;
+}
+
+.subpage > div > h2:after,
+.subpage > div > h2:after {
+	right: 0;
+}
+
+.subpage .topic .actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -20px;
+}
+
+.subpage .topic .actions > * {
+	padding: 5px 10px;
+	border: 2px solid #85cdca;
+	border-radius: 3px;
+	margin: 5px 0 20px;
+}
+
+.subpage .topic .actions .input {
+	display: flex;
+	padding: 0;
+	width: 30%;
+}
+
+.subpage .topic .actions .input div {
+	background-color: #85cdca;
+	height: 100%;
+	width: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.subpage .topic .actions .input div svg {
+	color: #fffdfd;
+}
+
+.subpage .topic .actions .input input {
+	outline: none;
+	border: none;
+	width: 100%;
+	padding: 0 5px;
+}
+
+.subpage .topic .actions button {
+	background-color: transparent;
+	color: rgba(39, 39, 39, 0.836);
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.subpage .topic .actions button:hover {
+	background-color: #85cdca;
+	color: #fffdfd;
+}

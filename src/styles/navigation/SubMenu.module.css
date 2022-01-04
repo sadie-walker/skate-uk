@@ -1,0 +1,21 @@
+.submenu {
+	display: flex;
+	flex-direction: column;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background-color: #41b3a3;
+	width: 250px;
+	z-index: 1;
+}
+
+.submenu > li {
+	padding: 10px;
+	border-top: 1px solid #fffdfd34;
+}
+
+.submenu > li:hover {
+	background-color: #fffdfd;
+	cursor: pointer;
+	color: rgba(39, 39, 39, 0.836);
+}

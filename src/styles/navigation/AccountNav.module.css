@@ -1,0 +1,40 @@
+.acc {
+	height: 100%;
+	align-self: center;
+	background: none;
+	border: none;
+	color: #fffdfd;
+	position: relative;
+	padding: 15px;
+	cursor: pointer;
+	z-index: 1;
+}
+
+.acc svg {
+	font-size: 20px;
+}
+
+.acc-menu {
+	position: absolute;
+	top: 100%;
+	right: 0px;
+	background-color: #41b3a3;
+	display: flex;
+	flex-direction: column;
+	width: 150px;
+	text-align: center;
+}
+
+.acc-menu > li {
+	padding: 10px;
+	border-top: 1px solid #fffdfd34;
+}
+
+.acc-menu > li:first-of-type {
+	cursor: default;
+}
+
+.acc-menu > li:not(:first-of-type):hover {
+	background-color: #fffdfd;
+	color: rgba(39, 39, 39, 0.836);
+}

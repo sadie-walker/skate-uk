@@ -18,14 +18,16 @@ const Directions = (props) => {
 		});
 	} else {
 		// convert subcategories into array to create directional blocks for each subcat
-		const subcategories = Object.entries(props.subcategories);
-		directionBlocks = subcategories.map(([key, value], i) => {
+		const subCats = Object.values(props.subcategories);
+		directionBlocks = subCats.map((item, i) => {
 			return (
 				<DirectionBlock
-					key={key + i}
-					title={key}
-					href={`${props.category}/${key.replace(/ /g, "-")}`}
-					bgImg={value.bgImg}
+					key={item.title + i}
+					title={item.title}
+					href={`/${props.category}/${item.title
+						.toLowerCase()
+						.replace(/ /g, "-")}`}
+					bgImg={item.bgImg}
 				/>
 			);
 		});

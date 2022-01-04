@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import styles from "../../styles/ThreadPageLayout.module.css";
+import styles from "../../styles/pageLayouts/ThreadPageLayout.module.css";
 
 const ThreadPageLayout = ({ parentPage, thread }) => {
 	let comments;

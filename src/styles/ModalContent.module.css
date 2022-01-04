@@ -1,0 +1,40 @@
+.modal-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-content h2 {
+	text-align: center;
+}
+
+.modal-form {
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-form-input-grp {
+	margin: 10px 0;
+	display: flex;
+	padding: 0 20px;
+}
+
+.modal-form-input-grp label {
+	display: inline-block;
+	width: 80px;
+	text-align: left;
+	margin-right: 10px;
+}
+
+.modal-form-input-grp input {
+	border: 0;
+	border-bottom: 1px solid;
+	outline: none;
+	flex: 1;
+}
+
+.modal-form button {
+	width: fit-content;
+	padding: 5px 40px;
+	align-self: center;
+	margin-top: 30px;
+}
