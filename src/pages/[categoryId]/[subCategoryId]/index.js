@@ -76,7 +76,7 @@ export const getStaticProps = async (context) => {
 
 	// get subCategory threads
 	const threadsSnapshot = await get(
-		child(dbRef, `/threads/${category}/${subCategory}`)
+		child(dbRef, `/threads/${category}/${subCategory}/threads`)
 	);
 	let threads = threadsSnapshot.val();
 

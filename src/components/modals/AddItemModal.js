@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import styles from "../styles/ModalContent.module.css";
-import firebaseApp from "../../firebase/firebase";
-import { getDatabase, ref, set } from "firebase/database";
+import styles from "../../styles/ModalContent.module.css";
+import firebaseApp from "../../../firebase/firebase";
+import { getDatabase, ref, set } from "../../../firebase/firebase";
 import { useRouter } from "next/dist/client/router";
 
 const AddItemModal = ({

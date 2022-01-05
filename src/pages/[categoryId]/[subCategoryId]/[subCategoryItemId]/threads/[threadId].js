@@ -3,6 +3,7 @@ import { ref, get, getDatabase, child } from "firebase/database";
 import ThreadPageLayout from "../../../../../components/pageLayouts/ThreadPageLayout";
 
 const subCatItemThreadPage = ({ pageItem, thread }) => {
+	console.log(thread);
 	return <ThreadPageLayout parentPage={pageItem} thread={thread} />;
 };
 
@@ -12,7 +13,7 @@ export const getServerSideProps = async (context) => {
 	const subCategoryItem = context.params.subCategoryItemId.replace(/-/g, " ");
 	const threadId = context.params.threadId.replace(/-/g, " ");
 
-	//fetch
+	//fetch thread
 	const dbRef = ref(getDatabase());
 	const snapshot = await get(
 		child(

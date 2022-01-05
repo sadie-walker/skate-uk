@@ -1,8 +1,8 @@
 import React from "react";
-import firebaseApp from "../../firebase/firebase";
+import firebaseApp from "../../../firebase/firebase";
 import { useRouter } from "next/dist/client/router";
 import { getDatabase, ref, set } from "firebase/database";
-import styles from "../styles/ModalContent.module.css";
+import styles from "../../styles/ModalContent.module.css";
 
 const AddThreadModal = ({ closeModal, refreshPage, threads }) => {
 	const router = useRouter();
@@ -22,8 +22,27 @@ const AddThreadModal = ({ closeModal, refreshPage, threads }) => {
 		// replace threads in db with new obj of threads
 		const categoryId = router.query.categoryId;
 		const subCategoryId = router.query.subCategoryId.replace(/-/g, " ");
+		const subCategoryItemId = router.query.subCategoryItemId.replace(
+			/-/g,
+			" "
+		);
+
 		const db = getDatabase(firebaseApp);
-		set(ref(db, `/threads/${categoryId}/${subCategoryId}`), updatedThreads);
+
+		if (subCategoryItemId) {
+			set(
+				ref(
+					db,
+					`/threads/${categoryId}/${subCategoryId}/${categoryId}/${subCategoryItemId}`
+				),
+				updatedThreads
+			);
+		} else {
+			set(
+				ref(db, `/threads/${categoryId}/${subCategoryId}/threads/`),
+				updatedThreads
+			);
+		}
 
 		// close modal and refresh page for threadlist to update visually
 		closeModal();

@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import styles from "../../styles/pageLayouts/SubCategoryItemPageLayout.module.css";
 import SubCategoryItemPageDetails from "../SubCategoryItemPageDetails";
 import ThreadSection from "./ThreadSection";
+import ModalHandler from "../modals/ModalHandler";
+import AddThreadModal from "../modals/AddThreadModal";
 
-const SubCategoryItemPageLayout = ({ pageItem, logo, fields, threads }) => {
+const SubCategoryItemPageLayout = ({
+	pageItem,
+	logo,
+	fields,
+	threads,
+	refreshPage,
+}) => {
+	const [modalOpen, setModalOpen] = useState(false);
+
+	const toggleModalHandler = (e) => {
+		setModalOpen((prev) => {
+			return !prev;
+		});
+	};
+
 	return (
 		<section>
 			<h1>{pageItem.name}</h1>
@@ -21,7 +37,16 @@ const SubCategoryItemPageLayout = ({ pageItem, logo, fields, threads }) => {
 					fields={fields}
 				/>
 			</div>
-			<ThreadSection threads={threads} className={className} />
+			<ThreadSection threads={threads} openModal={toggleModalHandler} />
+			{modalOpen && (
+				<ModalHandler closeModal={toggleModalHandler}>
+					<AddThreadModal
+						closeModal={toggleModalHandler}
+						refreshPage={refreshPage}
+						threads={threads}
+					/>
+				</ModalHandler>
+			)}
 		</section>
 	);
 };

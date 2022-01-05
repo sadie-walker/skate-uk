@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/router";
 import SubCategoryItemPageLayout from "../../../../components/pageLayouts/SubCategoryItemPageLayout";
 
 import firebaseApp from "../../../../../firebase/firebase";
@@ -10,12 +11,19 @@ import {
 } from "firebase/storage";
 
 const subCategoryItemPage = ({ pageItem, url, fields, threads }) => {
+	const router = useRouter();
+
+	const refreshPage = () => {
+		router.replace(router.asPath);
+	};
+
 	return (
 		<SubCategoryItemPageLayout
 			pageItem={pageItem}
 			logo={url}
 			fields={fields}
 			threads={threads}
+			refreshPage={refreshPage}
 		/>
 	);
 };
@@ -58,7 +66,7 @@ export const getServerSideProps = async (context) => {
 			`/threads/${category}/${subCategory}/${category}/${subCategoryItem}`
 		)
 	);
-	const threads = Object.values(threadSnapshot.val());
+	const threads = threadSnapshot.val();
 
 	return {
 		props: {

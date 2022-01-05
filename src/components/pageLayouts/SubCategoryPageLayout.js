@@ -5,9 +5,9 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import TopicList from "../TopicList";
 import ThreadSection from "./ThreadSection";
-import ModalHandler from "../ModalHandler";
-import AddItemModal from "../AddItemModal";
-import AddThreadModal from "../AddThreadModal";
+import ModalHandler from "../modals/ModalHandler";
+import AddItemModal from "../modals/AddItemModal";
+import AddThreadModal from "../modals/AddThreadModal";
 
 const SubCategoryPageLayout = ({
 	category,
