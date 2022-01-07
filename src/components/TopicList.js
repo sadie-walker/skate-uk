@@ -7,7 +7,6 @@ const TopicList = ({ list }) => {
 	if (list) {
 		const listArr = Object.keys(list);
 		listItems = listArr.map((item, i) => {
-			console.log(item);
 			return (
 				<li key={item + i} className={styles["list-item"]}>
 					<ListItem title={item} />

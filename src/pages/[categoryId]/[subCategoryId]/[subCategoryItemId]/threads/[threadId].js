@@ -3,7 +3,6 @@ import { ref, get, getDatabase, child } from "firebase/database";
 import ThreadPageLayout from "../../../../../components/pageLayouts/ThreadPageLayout";
 
 const subCatItemThreadPage = ({ pageItem, thread }) => {
-	console.log(thread);
 	return <ThreadPageLayout parentPage={pageItem} thread={thread} />;
 };
 

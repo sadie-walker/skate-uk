@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import DirectionBlock from "./DirectionBlock";
 import styles from "../styles/Directions.module.css";
 
