@@ -1,0 +1,50 @@
+.actions {
+	display: flex;
+	justify-content: space-between;
+	margin-top: -20px;
+}
+
+.actions > * {
+	padding: 5px 10px;
+	border: 2px solid #85cdca;
+	border-radius: 3px;
+	margin: 5px 0 20px;
+}
+
+.actions .input {
+	display: flex;
+	padding: 0;
+	width: 30%;
+}
+
+.actions .input div {
+	background-color: #85cdca;
+	height: 100%;
+	width: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.actions .input div svg {
+	color: #fffdfd;
+}
+
+.actions .input input {
+	outline: none;
+	border: none;
+	width: 100%;
+	padding: 0 5px;
+}
+
+.actions button {
+	background-color: transparent;
+	color: rgba(39, 39, 39, 0.836);
+	font-weight: 800;
+	cursor: pointer;
+}
+
+.actions button:hover {
+	background-color: #85cdca;
+	color: #fffdfd;
+}

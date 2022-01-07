@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import styles from "../../styles/pageLayouts/SubCategoryPageLayout.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import TopicList from "../TopicList";
 import ThreadSection from "./ThreadSection";
 import ModalHandler from "../modals/ModalHandler";
 import AddItemModal from "../modals/AddItemModal";
 import AddThreadModal from "../modals/AddThreadModal";
+import ActionBar from "../ActionBar";
 
 const SubCategoryPageLayout = ({
 	category,
@@ -38,17 +37,11 @@ const SubCategoryPageLayout = ({
 			<p>{subCategory.lead}</p>
 			<div className={styles.topic}>
 				<h2>{category}</h2>
-				<div className={styles.actions}>
-					<div className={styles.input}>
-						<div>
-							<FontAwesomeIcon icon={faSearch} />
-						</div>
-						<input type="text" />
-					</div>
-					<button onClick={openModalHandler} id="addItemBtn">
-						Add {category.substr(0, category.length - 1)}
-					</button>
-				</div>
+				<ActionBar
+					category={category}
+					openModal={openModalHandler}
+					id="addItemBtn"
+				/>
 				<TopicList list={subCategory[category]} />
 			</div>
 			<ThreadSection
