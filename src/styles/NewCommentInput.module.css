@@ -1,0 +1,20 @@
+.new-comment-input-grp {
+	display: flex;
+	width: 90%;
+	margin: 0 auto;
+}
+.new-comment-label {
+	margin-right: 10px;
+	align-self: center;
+}
+
+.new-comment-input {
+	background-color: #41b3a469;
+	border-radius: 5px;
+	padding: 10px;
+	outline: none;
+	border: 1.5px solid #41b3a3;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
