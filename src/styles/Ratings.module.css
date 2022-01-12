@@ -1,0 +1,54 @@
+.ratings {
+	position: absolute;
+	bottom: -15px;
+	right: 10px;
+	display: flex;
+	background-color: #fff;
+	height: 30px;
+}
+
+.comment {
+	transform: scale(0.85);
+}
+
+.rating {
+	position: relative;
+	display: flex;
+	align-items: center;
+	margin-left: 10px;
+	margin-right: 10px;
+	width: 80px;
+}
+
+.rating-counter {
+	background-color: #000;
+	color: #fff;
+	width: 60px;
+	height: 30px;
+	display: flex;
+	justify-content: left;
+	padding-left: 12px;
+	align-items: center;
+	position: absolute;
+	left: 0;
+	border-radius: 2px;
+	font-weight: 600;
+}
+
+.rating-icon {
+	background: #e27d60;
+	border-radius: 50%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	z-index: 0;
+	position: absolute;
+	right: 0;
+}
+
+.rating-icon:hover {
+	transform: scale(1.1);
+	color: #fff;
+}

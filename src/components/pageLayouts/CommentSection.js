@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
 import NewCommentInput from "../NewCommentInput";
+import Ratings from "../Ratings";
 
 const CommentSection = ({ thread, styles }) => {
 	const [comments, setComments] = useState([]);
@@ -23,14 +22,11 @@ const CommentSection = ({ thread, styles }) => {
 				<li key={"com_" + i}>
 					{comment.author}: {comment.comment}
 					<p>Posted: {comment.date}</p>
-					<div className={styles["thread-rating"]}>
-						<div className={styles["thread-rating-icon"]}>
-							<FontAwesomeIcon icon={faThumbsUp} />
-						</div>
-						<div className={styles["thread-rating-icon"]}>
-							<FontAwesomeIcon icon={faThumbsDown} />
-						</div>
-					</div>
+					<Ratings
+						likes={comment.likes}
+						dislikes={comment.dislikes}
+						type="comment"
+					/>
 				</li>
 			);
 		});

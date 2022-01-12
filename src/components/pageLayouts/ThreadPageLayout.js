@@ -1,6 +1,5 @@
 import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faThumbsDown, faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import Ratings from "../Ratings";
 import styles from "../../styles/pageLayouts/ThreadPageLayout.module.css";
 import CommentSection from "./CommentSection";
 
@@ -18,14 +17,11 @@ const ThreadPageLayout = ({ parentPage, thread }) => {
 					<p>Posted by: {thread.author}</p>
 					<p>Date posted: {thread.date}</p>
 				</div>
-				<div className={styles["thread-rating"]}>
-					<div className={styles["thread-rating-icon"]}>
-						<FontAwesomeIcon icon={faThumbsUp} />
-					</div>
-					<div className={styles["thread-rating-icon"]}>
-						<FontAwesomeIcon icon={faThumbsDown} />
-					</div>
-				</div>
+				<Ratings
+					likes={thread.likes}
+					dislikes={thread.dislikes}
+					type="thread"
+				/>
 			</div>
 			<CommentSection thread={thread} styles={styles} />
 		</section>

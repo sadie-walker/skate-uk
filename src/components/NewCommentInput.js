@@ -21,6 +21,8 @@ const NewCommentInput = ({ comments, updateComments }) => {
 				author: "user num",
 				date: `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`,
 				time: `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`,
+				likes: 0,
+				dislikes: 0,
 			};
 
 			// replace comments in db with new obj of threads

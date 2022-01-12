@@ -17,6 +17,9 @@ const AddThreadModal = ({ closeModal, refreshPage, threads }) => {
 		updatedThreads[e.target.title.value] = {
 			title: e.target.title.value,
 			post: e.target.post.value,
+			author: "user num",
+			likes: 0,
+			dislikes: 0,
 		};
 
 		// replace threads in db with new obj of threads
