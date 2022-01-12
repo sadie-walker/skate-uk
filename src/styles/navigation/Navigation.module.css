@@ -6,7 +6,7 @@
 }
 
 .nav > ul {
-	height: 100%;
+	height: inherit;
 	max-width: 1400px;
 	display: flex;
 	justify-content: flex-end;
@@ -19,6 +19,9 @@
 
 .nav > ul > li > a {
 	height: 100%;
+	font-family: "Ostrich Sans";
+	font-weight: 600;
+	letter-spacing: 1px;
 }
 
 .links {
