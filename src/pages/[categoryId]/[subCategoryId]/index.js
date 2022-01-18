@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import SubCategoryPageLayout from "../../../components/pageLayouts/SubCategoryPageLayout";
 import firebaseApp from "../../../../firebase/firebase";
 import { getDatabase, ref, get, child } from "firebase/database";
@@ -6,7 +6,6 @@ import { useRouter } from "next/router";
 
 const subCategoryPage = ({ category, fields, subCategory, threads }) => {
 	const router = useRouter();
-
 	const refreshPage = () => {
 		router.replace(router.asPath);
 	};

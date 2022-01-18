@@ -2,6 +2,10 @@ import React from "react";
 
 const SubCategoryItemPageDetails = ({ pageItem, fields }) => {
 	const list = fields.map((field, i) => {
+		if (field === "Image") {
+			return;
+		}
+
 		return (
 			<li key={field + i}>
 				<strong>{field}:</strong>

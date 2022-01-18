@@ -8,7 +8,6 @@ import AddThreadModal from "../modals/AddThreadModal";
 
 const SubCategoryItemPageLayout = ({
 	pageItem,
-	logo,
 	fields,
 	threads,
 	refreshPage,
@@ -26,11 +25,11 @@ const SubCategoryItemPageLayout = ({
 			<h1>{pageItem.name}</h1>
 			<div className={styles["grp-layout-content"]}>
 				<Image
-					loader={() => logo}
-					src={logo}
-					alt="group logo"
-					height="200"
-					width="300"
+					loader={() => pageItem.image}
+					src={pageItem.image}
+					alt="logo"
+					height={250}
+					width={350}
 				></Image>
 				<SubCategoryItemPageDetails
 					pageItem={pageItem}

@@ -1,16 +1,9 @@
 import React from "react";
 import { useRouter } from "next/router";
+import { getDatabase, ref, get, child } from "firebase/database";
 import SubCategoryItemPageLayout from "../../../../components/pageLayouts/SubCategoryItemPageLayout";
 
-import firebaseApp from "../../../../../firebase/firebase";
-import { getDatabase, ref, get, child } from "firebase/database";
-import {
-	getStorage,
-	ref as storageRef,
-	getDownloadURL,
-} from "firebase/storage";
-
-const subCategoryItemPage = ({ pageItem, url, fields, threads }) => {
+const subCategoryItemPage = ({ pageItem, fields, threads }) => {
 	const router = useRouter();
 
 	const refreshPage = () => {
@@ -20,7 +13,6 @@ const subCategoryItemPage = ({ pageItem, url, fields, threads }) => {
 	return (
 		<SubCategoryItemPageLayout
 			pageItem={pageItem}
-			logo={url}
 			fields={fields}
 			threads={threads}
 			refreshPage={refreshPage}
@@ -49,16 +41,6 @@ export const getServerSideProps = async (context) => {
 	);
 	const categoryFields = fieldsSnapshot.val();
 
-	// fetch logo image from storage
-	const storageReference = storageRef(getStorage(firebaseApp));
-	let logo;
-	if (pageItem.img) {
-		logo = storageRef(storageReference, `images/${pageItem.img}`);
-	} else {
-		logo = storageRef(storageReference, `images/defaultLocation.jpg`);
-	}
-	const logoUrl = await getDownloadURL(logo);
-
 	// fetch threads
 	const threadSnapshot = await get(
 		child(
@@ -70,7 +52,6 @@ export const getServerSideProps = async (context) => {
 
 	return {
 		props: {
-			url: logoUrl,
 			pageItem: subCat[category][subCategoryItem],
 			fields: [...categoryFields, ...subCat.subCategoryFields],
 			threads,

@@ -19,6 +19,7 @@
 	left: 0;
 	margin: auto;
 	padding: 20px 10px;
+	z-index: 2;
 }
 
 .modal svg {

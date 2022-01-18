@@ -5,11 +5,18 @@ import ListItem from "./ListItem";
 const TopicList = ({ list }) => {
 	let listItems;
 	if (list) {
-		const listArr = Object.keys(list);
+		const listArr = Object.values(list);
+
 		listItems = listArr.map((item, i) => {
 			return (
-				<li key={item + i} className={styles["list-item"]}>
-					<ListItem title={item} />
+				<li
+					key={item.name + i}
+					className={styles["list-item"]}
+					style={{
+						backgroundImage: `url(${item.image})`,
+					}}
+				>
+					<ListItem title={item.name} />
 				</li>
 			);
 		});

@@ -6,9 +6,21 @@
 }
 
 .list-item {
-	background-color: #85cdca;
+	background-size: cover;
+	background-position: center;
 	cursor: pointer;
 	margin: 10px;
+	position: relative;
+}
+
+.list-item::after {
+	content: " ";
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
 }
 
 .list-item > div {
@@ -19,4 +31,6 @@
 
 .list-item > div > h2 {
 	margin: 0;
+	color: #fff;
+	z-index: 1;
 }
