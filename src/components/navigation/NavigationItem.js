@@ -27,15 +27,15 @@ const NavigationItem = (props) => {
 		},
 		{
 			title: "Artistic",
-			href: "/groups/artistic",
+			href: "/groups/artistic-skating",
 		},
 		{
 			title: "Jam Skating",
-			href: "/groups/jam",
+			href: "/groups/jam-skating",
 		},
 		{
 			title: "Other",
-			href: "/groups/other",
+			href: "/groups/other-skating-groups",
 		},
 	];
 

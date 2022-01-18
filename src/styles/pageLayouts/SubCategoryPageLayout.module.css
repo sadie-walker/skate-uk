@@ -9,7 +9,6 @@
 	font-size: calc(100% + 1.5vw);
 	text-align: center;
 	position: relative;
-	/* margin-bottom: 0px; */
 }
 
 .subpage > div > h2:before,
