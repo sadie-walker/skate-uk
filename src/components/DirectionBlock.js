@@ -3,13 +3,12 @@ import Link from "next/link";
 import styles from "../styles/DirectionBlock.module.css";
 
 const DirectionBlock = (props) => {
-	const img = require(`../assets/${props.bgImg}`).default.src;
 	return (
 		<Link href={props.href} passHref>
 			<div
 				className={styles.block}
 				style={{
-					backgroundImage: `url(${img})`,
+					backgroundImage: `url(${props.bgImg})`,
 				}}
 			>
 				<h2>{props.title}</h2>

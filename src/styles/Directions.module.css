@@ -5,3 +5,7 @@
 	width: 90%;
 	margin: auto;
 }
+
+.half-page {
+	grid-template-columns: repeat(auto-fill, minmax(295px, 1fr));
+}

@@ -7,11 +7,7 @@ const CategoryPageLayout = ({ category }) => {
 		<section>
 			<h1 className={styles.title}>{category.title}</h1>
 			<p>{category.lead}</p>
-			<Directions
-				category={category.category}
-				subcategories={category.types}
-				width="1fr"
-			/>
+			<Directions directions={category.types} />
 		</section>
 	);
 };
