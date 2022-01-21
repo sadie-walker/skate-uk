@@ -15,7 +15,10 @@ const Ratings = (props) => {
 
 	const categoryId = router.query.categoryId;
 	const subCategoryId = router.query.subCategoryId.replace(/-/g, " ");
-	const subCategoryItemId = router.query.subCategoryItemId.replace(/-/g, " ");
+	let subCategoryItemId;
+	if (router.query.subCategoryItemId) {
+		subCategoryItemId = router.query.subCategoryItemId.replace(/-/g, " ");
+	}
 	const threadId = router.query.threadId.replace(/-/g, " ");
 
 	// update likes in db
@@ -43,7 +46,6 @@ const Ratings = (props) => {
 	// call updateLikes when likes state changes
 	useEffect(() => {
 		if (likes) {
-			console.log("likes");
 			updateLikes();
 		}
 	}, [likes]);
@@ -51,7 +53,6 @@ const Ratings = (props) => {
 	// call updateDislikes when dislikes state changes
 	useEffect(() => {
 		if (dislikes) {
-			console.log("dislikes");
 			updateDislikes();
 		}
 	}, [dislikes]);
