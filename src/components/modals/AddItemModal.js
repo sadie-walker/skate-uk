@@ -56,17 +56,22 @@ const AddItemModal = ({
 		const img = e.target["Image"].files[0];
 		let storageRef;
 		if (!img) {
-			console.log(category);
 			if (category === "locations") {
 				storageRef = refStorage(
 					storage,
-					`images/default-${router.query.subCategoryId}.jpg`
+					`images/locations/default-${router.query.subCategoryId}.jpg`
 				);
 			} else {
-				storageRef = refStorage(storage, "images/default-group.jpg");
+				storageRef = refStorage(
+					storage,
+					"images/groups/default-group.jpg"
+				);
 			}
 		} else {
-			storageRef = refStorage(storage, `images/${img.name}`);
+			storageRef = refStorage(
+				storage,
+				`images/${router.query.subCategoryId}/${img.name}`
+			);
 			await uploadBytes(storageRef, img);
 		}
 

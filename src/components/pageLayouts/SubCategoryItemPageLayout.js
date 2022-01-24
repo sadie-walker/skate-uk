@@ -13,7 +13,6 @@ const SubCategoryItemPageLayout = ({
 	refreshPage,
 }) => {
 	const [modalOpen, setModalOpen] = useState(false);
-
 	const toggleModalHandler = (e) => {
 		setModalOpen((prev) => {
 			return !prev;
